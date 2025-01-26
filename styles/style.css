@@ -1,0 +1,409 @@
+/* Основные стили для шапки */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  place-items: center;
+  width: 1100px;
+  height: 293px;
+}
+
+/* Стили для меню в шапке */
+.header-menu ul {
+  width: 391.48px;
+  display: flex;
+  list-style: none;
+
+  justify-content: space-between;
+
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.13px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  margin-left: 25px;
+}
+
+/* Добавление разделителя между пунктами меню */
+.header-menu ul li::after {
+  content: "○";
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+/* Удаление разделителя у последнего пункта меню */
+.header-menu ul li:last-child::after {
+  content: "";
+}
+
+/* Стили для активной ссылки в меню */
+.header-link-active {
+  text-decoration: none;
+}
+
+/* Стили для блока контактов в шапке */
+.header-contacts {
+  width: 200px;
+  height: 98px;
+
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.3px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  margin-left: 100px;
+}
+
+/* Стили для логотипа в шапке */
+.header-logo {
+  width: 135px;
+  height: 105px;
+  margin-bottom: 5px;
+}
+
+/* Основные стили для обложки */
+.cover {
+  position: relative;
+  width: 1100px;
+  height: 757px;
+  left: 0px;
+}
+
+/* Стили для изображения обложки */
+.cover-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Стили для затемнения обложки */
+.cover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Стили для контейнера с текстом на обложке */
+.cover-text-container {
+  position: absolute;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  padding: 50px;
+  padding-top: 165px;
+}
+
+/* Стили для контейнера с заголовком */
+.title-container {
+  width: 1027px;
+  height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: auto;
+}
+
+/* Стили для текста заголовка */
+.title-text {
+  color: white;
+  font-weight: bold;
+  font-family: "Raleway";
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 115px;
+  letter-spacing: 0.3em;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+}
+
+/* Выравнивание первого слова заголовка */
+.title-container p:nth-child(1) {
+  align-self: flex-start;
+}
+
+/* Выравнивание второго слова заголовка */
+.title-container p:nth-child(2) {
+  align-self: center;
+}
+
+/* Выравнивание третьего слова заголовка */
+.title-container p:nth-child(3) {
+  align-self: flex-end;
+}
+
+/* Стили для контейнера с подзаголовком и кнопкой */
+.bottom-cover-subtitle-nd-button {
+  display: grid;
+  grid-template-columns: 1fr 256px;
+  margin-top: auto;
+  width: 1000px;
+  height: 51px;
+}
+
+/* Стили для подзаголовка */
+.subtitle {
+  display: flex;
+  align-items: center;
+
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  height: 51px;
+  word-spacing: 0.85em;
+}
+
+/* Стили для кнопки */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 25.83px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+
+  height: 51px;
+}
+
+/* Стили для секции с лотами */
+.lots {
+  position: relative;
+  justify-self: center;
+  display: grid;
+  grid-template-rows: 74px 596px 53px;
+  margin-top: 180px;
+  width: 1052px;
+  height: 723px;
+}
+
+/* Стили для заголовка секции с лотами */
+.lots-title {
+  width: 1052px;
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 43px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 50px;
+  padding-left: 40px;
+
+  margin-left: 4px;
+  margin-top: 1px;
+}
+
+/* Стили для изображения лота */
+.lot-image {
+  object-fit: cover;
+  width: 334px;
+  height: 596px;
+}
+
+/* Стили для затемнения изображения лота */
+.lot-image__overlay {
+  position: absolute;
+  top: 74px;
+  width: 334px;
+  height: 596px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* Стили для превью лотов */
+.lots-preview {
+  width: 1051px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+}
+
+/* Стили для ссылки "показать больше" */
+.show-more {
+  padding-left: 40px;
+  margin-top: auto;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+/* Стили для контейнера с текстом лота */
+.lot-text-container {
+  position: absolute;
+  display: grid;
+  width: 334px;
+  height: 596px;
+  top: 74px;
+  z-index: 2;
+  padding: 48px 40px 48px 40px;
+}
+
+/* Стили для заголовка лота */
+.lot-title {
+  text-align: center;
+  display: flex;
+  font-family: Raleway;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.4px;
+  text-align: left;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+/* Стили для описания лота */
+.lot-description {
+  display: flex;
+  align-self: flex-end;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: white;
+}
+
+/* Стили для секции "об аукционе" */
+.about {
+  width: 1052px;
+  height: 595px;
+  margin-top: 120px;
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 359px 1fr;
+  grid-template-rows: 275px 320px;
+}
+
+/* Стили для контейнера с текстом в секции "об аукционе" */
+.about-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding-top: 6px;
+}
+
+/* Стили для заголовка секции "об аукционе" */
+.about-title {
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 46.96px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-transform: uppercase;
+  align-content: center;
+
+  padding-top: 50px;
+}
+
+/* Стили для текста в секции "об аукционе" */
+.about-text {
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+/* Стили для логотипа в секции "об аукционе" */
+.about-logo {
+  width: 240px;
+  height: 240px;
+  margin-right: 26px;
+  place-self: center;
+
+  margin-bottom: -30px;
+}
+
+/* Стили для заголовка в секции "об аукционе" */
+.about-header {
+  display: flex;
+  align-items: center;
+}
+
+/* Стили для футера */
+.footer {
+  width: 1100px;
+  height: 180px;
+  margin-top: 180px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+/* Стили для меню в футере */
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  font-size: 19px;
+}
+
+/* Стили для социальных иконок в футере */
+.footer-socials {
+  width: 240px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Стили для изображений социальных иконок в футере */
+.footer-social-img {
+  width: 48px;
+}
+
+/* Стили для блока контактов в шапке */
+.footer-contacts {
+  width: 235px;
+  height: 98px;
+
+  font-family: "Raleway";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24.3px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  margin-left: 50px;
+}
