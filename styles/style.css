@@ -341,6 +341,7 @@
 /* Стили для футера */
 .footer {
   width: 1100px;
+  min-height: 180px;
   margin-top: 180px;
   display: flex;
   justify-content: space-between;
