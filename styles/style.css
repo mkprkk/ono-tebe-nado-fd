@@ -5,7 +5,8 @@
   place-items: center;
   width: 1100px;
 
-  min-height: 293px;
+  padding-top: 92px;
+  padding-bottom: 91px;
 }
 
 /* Стили для меню в шапке */
@@ -86,10 +87,10 @@
 .title-text {
   color: white;
   font-weight: bold;
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: 100px;
   line-height: 115px;
-  letter-spacing: 0.3em; 
+  letter-spacing: 0.3em;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-transform: uppercase;
@@ -116,7 +117,7 @@
   grid-template-columns: 1fr 256px;
   margin-top: auto;
   width: 1000px;
-  min-height: 51px;
+  margin-top: 80px;
 }
 
 /* Стили для подзаголовка */
@@ -168,7 +169,11 @@
   width: 334px;
   min-height: 596px;
   display: grid;
-  z-index: 2;
+  z-index: 1;
+}
+
+.lot-link {
+  text-decoration: none;
 }
 
 /* Стили для заголовка секции с лотами */
@@ -189,21 +194,15 @@
   margin-top: 1px;
 }
 
-.lot-image-1 {
-  width: 100%;
-  height: 100%;
+.image-1 {
   background: url(../images/card-lot-01.jpg) center / cover;
 }
 
-.lot-image-2 {
-  width: 100%;
-  height: 100%;
+.image-2 {
   background: url(../images/card-lot-02.jpg) center / cover;
 }
 
-.lot-image-3 {
-  width: 100%;
-  height: 100%;
+.image-3 {
   background: url(../images/card-lot-03.jpg) center / cover;
 }
 
@@ -216,6 +215,10 @@
   grid-template-columns: 1fr;
 
   list-style: none;
+
+  flex-wrap: wrap;
+
+  row-gap: 25px;
 }
 
 /* Стили для ссылки "показать больше" */
@@ -233,13 +236,11 @@
 
 /* Стили для заголовка лота */
 .lot-title {
-  position: absolute;
   place-self: center;
 
   width: 254px;
   height: 100%;
 
-  display: inline;
   font-family: "Raleway", sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -257,20 +258,13 @@
 
 /* Стили для описания лота */
 .lot-description {
-  position: absolute;
   place-self: center;
 
   width: 254px;
 
-  display: flex;
   align-self: flex-end;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   color: white;
 
   z-index: 2;
@@ -285,20 +279,29 @@
   display: grid;
   justify-self: center;
   grid-template-columns: 359px 1fr;
-  grid-template-rows: 275px 320px;
+
+  grid-template-areas:
+    "logo title"
+    ". text-container";
 }
 
 /* Стили для контейнера с текстом в секции "об аукционе" */
 .about-text-container {
+  grid-area: text-container;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  padding-top: 6px;
+  padding-top: 10px;
+
+  gap: 25px;
 }
 
 /* Стили для заголовка секции "об аукционе" */
 .about-title {
+  grid-area: title;
+
   font-family: "Raleway", sans-serif;
   font-size: 40px;
   font-weight: 700;
@@ -324,6 +327,8 @@
 
 /* Стили для логотипа в секции "об аукционе" */
 .about-logo {
+  grid-area: logo;
+
   width: 240px;
   height: 240px;
   margin-right: 26px;
@@ -341,7 +346,6 @@
 /* Стили для футера */
 .footer {
   width: 1100px;
-  min-height: 180px;
   margin-top: 180px;
   display: flex;
   justify-content: space-between;
